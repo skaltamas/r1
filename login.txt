@@ -1,0 +1,30 @@
+Feature: Verify login
+
+ Scenario: Verify login popup
+  Given user is on quikr home page
+  When user click on login/register
+  Then login popup is displayed
+
+ Scenario: Verify valid login with email/number
+  Given user is on login popup
+  When user enters valid email/number and password
+  Then user is logged in
+
+ Scenario: Verify invalid login
+  Given user is on login popup
+  When user enters invalid credentials
+  Then user is not logged in
+
+ Scenario: Verify login with otp
+  Given user is on login popup
+  When user clicks on login with otp
+  And user enters number and enters otp
+  Then user is logged in
+
+ Scenario: Verify forgot password
+  Given user is on login popup
+  When user clicks on forgot password link
+  And user enters email and clicks on submit
+  Then user gets the link for forget password on given email
+
+
