@@ -15,12 +15,6 @@ Feature: Verify login
   When user enters invalid credentials
   Then user is not logged in
 
- Scenario: Verify login with otp
-  Given user is on login popup
-  When user clicks on login with otp
-  And user enters number and enters otp
-  Then user is logged in
-
  Scenario: Verify forgot password
   Given user is on login popup
   When user clicks on forgot password link
